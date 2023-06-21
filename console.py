@@ -1,11 +1,12 @@
 import console_functions as cf
+from console_functions import color_green, color_red
 
 
 def console():
     while True:
         cf.manager.load_notes()
         cf.print_menu()
-        choice = input("Enter your choice: ")
+        choice = input(color_green("Enter your choice: "))
 
         match choice:
             case "1":
@@ -21,4 +22,4 @@ def console():
             case "0":
                 break
             case _:
-                print("Invalid choice. Please try again.")
+                print(color_red("Invalid choice. Please try again."))
